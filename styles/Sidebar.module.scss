@@ -1,0 +1,30 @@
+.itemContainer {
+  display: flex;
+  gap: 10px;
+  width: 150px;
+  padding: 15px 10px;
+  &:hover {
+    background-color: rgba(169, 169, 169, 0.404);
+    cursor: pointer;
+  }
+  p {
+    @media (max-width: 500px) {
+      display: none;
+    }
+  }
+  @media (max-width: 500px) {
+    width: 50px;
+  }
+}
+.profSection {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  padding: 15px 10px;
+  p {
+    @media (max-width: 500px) {
+      display: none;
+    }
+  }
+}

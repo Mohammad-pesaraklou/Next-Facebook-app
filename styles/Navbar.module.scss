@@ -1,0 +1,56 @@
+.facebookIcon {
+  background: blue;
+  border-radius: 50%;
+  font-size: 40px;
+  &:hover {
+    cursor: pointer;
+  }
+}
+.left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.icon {
+  //   background-color: black;
+  color: black;
+  border-radius: 50%;
+  font-size: 27px;
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+  @media (max-width: 500px) {
+    font-size: 20px;
+  }
+}
+.right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  .rightIcon {
+    @media (max-width: 900px) {
+      display: none;
+    }
+  }
+  p {
+    color: black;
+    @media (max-width: 500px) {
+      display: none;
+    }
+  }
+  div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+  }
+}

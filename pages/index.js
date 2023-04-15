@@ -1,7 +1,13 @@
+import SideBar from "@/components/modules/SideBar";
+import styles from "../styles/Home.module.scss";
+import Feed from "@/components/template/Feed";
+import Contacts from "@/components/template/Contacts";
 export default function Home() {
   return (
-    <div>
-      <h1>hello world</h1>
+    <div className={styles.container}>
+      <SideBar />
+      <Feed />
+      <Contacts />
     </div>
   );
 }
