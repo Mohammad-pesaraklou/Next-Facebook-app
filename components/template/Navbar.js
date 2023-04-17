@@ -1,4 +1,6 @@
 import { AppBar, Avatar, TextField, Toolbar } from "@mui/material";
+import { signIn, useSession } from "next-auth/react";
+// icon
 import { BsFacebook } from "react-icons/bs";
 import { AiFillHome } from "react-icons/ai";
 import { HiOutlineFlag } from "react-icons/hi";
@@ -13,6 +15,12 @@ import { MdKeyboardArrowDown } from "react-icons/md";
 import styles from "../../styles/Navbar.module.scss";
 
 const Navbar = () => {
+  const { data } = useSession();
+  console.log(data);
+  const signInHandler = () => {
+    signIn("github");
+  };
+
   return (
     <AppBar sx={{ background: "#fff" }}>
       <Toolbar
@@ -29,6 +37,7 @@ const Navbar = () => {
           <TextField
             variant="outlined"
             size="small"
+            placeholder="Search in Facebook.."
             sx={{ marginLeft: "10px", display: { xs: "none", md: "block" } }}
           />
         </div>
@@ -42,10 +51,10 @@ const Navbar = () => {
         </div>
         <div className={styles.right}>
           {/* right side */}
-          <div>
+          <div onClick={signInHandler}>
             {/* profile section */}
-            <Avatar />
-            <p>mohammad ate</p>
+            <Avatar src={data?.user?.image || ""} />
+            <p>{data?.user?.name}</p>
           </div>
           <div className={styles.rightIcon}>
             <MdWidgets className={styles.icon} />

@@ -1,0 +1,41 @@
+.coverImage {
+  @media (max-width: 900px) {
+    display: none;
+  }
+  @media (min-width: 1220px) {
+    width: 190px;
+  }
+
+  border-radius: 15px;
+  filter: brightness(0.6);
+}
+.container {
+  position: relative;
+}
+.mainContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+.profileImage {
+  border-radius: 50%;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  @media (max-width: 900px) {
+    width: 100px;
+    height: 100px;
+    position: relative;
+  }
+  @media (max-width: 670px) {
+    width: 50px;
+    height: 50px;
+    position: relative;
+  }
+  @media (max-width: 500px) {
+    width: 60px;
+    height: 60px;
+    position: relative;
+  }
+}

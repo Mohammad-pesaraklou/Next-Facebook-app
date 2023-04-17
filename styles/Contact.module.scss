@@ -1,8 +1,28 @@
+.topSection {
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .iconContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+  }
+}
 .itemSection {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   gap: 5px;
   padding: 20px 10px;
-  max-width: 150px;
+  &:hover {
+    background-color: rgba(169, 169, 169, 0.404);
+    cursor: pointer;
+  }
+}
+.container {
+  @media (max-width: 1086px) {
+    display: none;
+  }
 }

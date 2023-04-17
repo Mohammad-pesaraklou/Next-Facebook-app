@@ -35,6 +35,7 @@ const itemArray = [
     icon: <KeyboardArrowDownOutlinedIcon />,
   },
 ];
+
 const contacts = [
   {
     name: "Naruto",
@@ -57,5 +58,27 @@ const contacts = [
     images: "/images/four.jpeg",
   },
 ];
+const StoriesData = [
+  {
+    name: "Naruto",
+    images: "/images/story1.jpeg",
+    profile: "/images/narouto.jpeg",
+  },
+  {
+    name: "Hunter",
+    images: "/images/story2.jpeg",
+    profile: "/images/one.jpeg",
+  },
+  {
+    name: "Hisucka",
+    images: "/images/story3.jpeg",
+    profile: "/images/two.jpeg",
+  },
+  {
+    name: "Kurapika",
+    images: "/images/story4.jpeg",
+    profile: "/images/tree.jpeg",
+  },
+];
 
-export { itemArray, contacts };
+export { itemArray, contacts, StoriesData };

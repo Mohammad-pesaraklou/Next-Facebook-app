@@ -1,9 +1,13 @@
-import React from "react";
-
+import Stories from "../modules/Stories";
+import styles from "../../styles/Feed.module.scss";
+import InputBox from "../modules/InputBox";
+import Posts from "../modules/Posts";
 const Feed = () => {
   return (
-    <div>
-      <h4>This is Feed section</h4>
+    <div className={styles.container}>
+      <Stories />
+      <InputBox />
+      <Posts />
     </div>
   );
 };

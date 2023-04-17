@@ -2,7 +2,9 @@ import { itemArray } from "@/utils/dummy";
 import { Avatar, Stack } from "@mui/material";
 // styles
 import styles from "../../styles/Sidebar.module.scss";
+import { useSession } from "next-auth/react";
 const SideBar = () => {
+  const { data } = useSession();
   return (
     <Stack
       flexDirection={"column"}
@@ -13,8 +15,11 @@ const SideBar = () => {
     >
       <div>
         <div className={styles.profSection}>
-          <Avatar sx={{ width: "23px", height: "23px" }} />
-          <p>mohammad</p>
+          <Avatar
+            src={data?.user?.image || ""}
+            sx={{ width: "23px", height: "23px" }}
+          />
+          <p>{data?.user?.name}</p>
         </div>
         {itemArray.map((item) => (
           <div key={item.name} className={styles.itemContainer}>
