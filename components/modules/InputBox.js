@@ -1,11 +1,14 @@
 import { useSession } from "next-auth/react";
-import styles from "../../styles/InputBox.module.scss";
+import { useRef, useState } from "react";
+import { useRouter } from "next/router";
 import { Avatar } from "@mui/material";
+import axios from "axios";
+// icon
 import VideoCameraFrontOutlinedIcon from "@mui/icons-material/VideoCameraFrontOutlined";
 import SentimentSatisfiedIcon from "@mui/icons-material/SentimentSatisfied";
 import CameraAltIcon from "@mui/icons-material/CameraAlt";
-import { useRef, useState } from "react";
-import axios from "axios";
+// styles
+import styles from "../../styles/InputBox.module.scss";
 
 const InputBox = () => {
   const { data } = useSession();
@@ -13,7 +16,7 @@ const InputBox = () => {
   const messageRef = useRef();
   const [imagePicker, setImagePicker] = useState(null);
   const [errorMsg, setErrorMsg] = useState(null);
-
+  const router = useRouter();
   const addImageToPost = (e) => {
     const reader = new FileReader();
     if (e.target.files[0]) {
@@ -43,8 +46,10 @@ const InputBox = () => {
     const req = await axios.post("api/posts/addPost", {
       obj,
     });
+    console.log(req);
     messageRef.current.value = "";
     setImagePicker(null);
+    if (req.status === 201) return router.reload();
   };
 
   return (

@@ -4,7 +4,7 @@ const postSchema = Schema({
   author: String,
   message: {
     type: String,
-    maxLength: 200,
+    maxLength: 500,
   },
   image: String,
   createdAt: {

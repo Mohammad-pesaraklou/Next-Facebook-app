@@ -6,6 +6,7 @@ export default async function handler(req, res) {
   try {
     await ConnectDB();
   } catch (error) {
+    console.log(error);
     res
       .status(500)
       .json({ status: "failure", message: "error in connecting to db" });

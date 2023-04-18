@@ -1,8 +1,8 @@
 import { itemArray } from "@/utils/dummy";
 import { Avatar, Stack } from "@mui/material";
+import { useSession } from "next-auth/react";
 // styles
 import styles from "../../styles/Sidebar.module.scss";
-import { useSession } from "next-auth/react";
 const SideBar = () => {
   const { data } = useSession();
   return (

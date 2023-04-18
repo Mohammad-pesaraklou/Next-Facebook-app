@@ -1,5 +1,5 @@
 import { AppBar, Avatar, TextField, Toolbar } from "@mui/material";
-import { signIn, useSession } from "next-auth/react";
+import { signIn, signOut, useSession } from "next-auth/react";
 // icon
 import { BsFacebook } from "react-icons/bs";
 import { AiFillHome } from "react-icons/ai";
@@ -15,10 +15,15 @@ import { MdKeyboardArrowDown } from "react-icons/md";
 import styles from "../../styles/Navbar.module.scss";
 
 const Navbar = () => {
-  const { data } = useSession();
-  console.log(data);
+  const session = useSession();
+  const { data } = session;
+  console.log(session);
   const signInHandler = () => {
-    signIn("github");
+    if (session.status === "unauthenticated") {
+      signIn("github");
+    } else if (session.status === "authenticated") {
+      signOut();
+    }
   };
 
   return (
@@ -54,16 +59,30 @@ const Navbar = () => {
           <div onClick={signInHandler}>
             {/* profile section */}
             <Avatar src={data?.user?.image || ""} />
-            <p>{data?.user?.name}</p>
+            <p>{data?.user?.name} </p>
           </div>
           <div className={styles.rightIcon}>
-            <MdWidgets className={styles.icon} />
-            <BsFillChatDotsFill className={styles.icon} />
-            <IoNotificationsOutline className={styles.icon} />
-            <MdKeyboardArrowDown
-              className={styles.icon}
-              style={{ border: "1px solid darkgray", borderRadius: "50%" }}
-            />
+            <div>
+              <MdWidgets style={{ fontSize: "20px" }} className={styles.icon} />
+            </div>
+            <div>
+              <BsFillChatDotsFill
+                style={{ fontSize: "20px" }}
+                className={styles.icon}
+              />
+            </div>
+            <div>
+              <IoNotificationsOutline
+                style={{ fontSize: "20px" }}
+                className={styles.icon}
+              />
+            </div>
+            <div>
+              <MdKeyboardArrowDown
+                className={styles.icon}
+                style={{ fontSize: "20px" }}
+              />
+            </div>
           </div>
         </div>
       </Toolbar>

@@ -18,6 +18,22 @@
     width: 100%;
     gap: 10px;
   }
+
+  @media (min-width: 1200px) {
+    width: 800px;
+  }
+  @media (max-width: 900px) {
+    width: 600px;
+  }
+  @media (max-width: 700px) {
+    width: 380px;
+  }
+  @media (max-width: 500px) {
+    width: 400px;
+  }
+  @media (max-width: 460px) {
+    width: 350px;
+  }
 }
 .divider {
   width: 100%;
@@ -26,7 +42,7 @@
 }
 .emojiSection {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   gap: 20px;
   width: 100%;
@@ -35,9 +51,22 @@
     justify-content: center;
     align-items: center;
     gap: 4px;
+    padding: 0px 10px;
     font-weight: 700px;
     &:hover {
       cursor: pointer;
+    }
+    p {
+      @media (max-width: 700px) {
+        display: none;
+      }
+      @media (max-width: 500px) {
+        display: block;
+        font-size: 13px;
+      }
+      @media (max-width: 460px) {
+        display: none;
+      }
     }
   }
 }

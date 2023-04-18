@@ -16,11 +16,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 50px;
+  @media (max-width: 1060px) {
+    gap: 30px;
+  }
+  @media (max-width: 75px) {
+    gap: 10px;
+  }
 }
 .icon {
-  //   background-color: black;
-  color: black;
+  color: rgba(0, 0, 0, 0.754);
   border-radius: 50%;
   font-size: 27px;
   &:hover {
@@ -37,8 +42,17 @@
   align-items: center;
   gap: 8px;
   .rightIcon {
-    @media (max-width: 900px) {
+    @media (max-width: 1000px) {
       display: none;
+    }
+    div {
+      background-color: rgba(169, 169, 169, 0.333);
+      padding: 10px;
+      border-radius: 50%;
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+      }
     }
   }
   p {
@@ -52,5 +66,8 @@
     justify-content: center;
     align-items: center;
     gap: 5px;
+    &:hover {
+      cursor: pointer;
+    }
   }
 }
