@@ -1,7 +1,9 @@
+// data
 import { StoriesData } from "@/utils/dummy";
-import React from "react";
-import StoriesCard from "./StoriesCard";
+// styles
 import styles from "../../styles/StoriesStyle.module.scss";
+// components
+import StoriesCard from "./StoriesCard";
 
 const Stories = () => {
   return (

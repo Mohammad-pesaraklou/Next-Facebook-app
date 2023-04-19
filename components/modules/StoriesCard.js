@@ -1,4 +1,5 @@
 import Image from "next/image";
+// style
 import styles from "../../styles/StoriesStyle.module.scss";
 
 const StoriesCard = ({ images, profile }) => {

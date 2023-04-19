@@ -6,7 +6,6 @@ export default async function handler(req, res) {
   try {
     await ConnectDB();
   } catch (error) {
-    console.log(error);
     res
       .status(500)
       .json({ status: "failure", message: "error in connecting to db" });
@@ -21,6 +20,6 @@ export default async function handler(req, res) {
   }
 
   const newPost = await Post.create({ author, image, message });
-  console.log(newPost);
+
   res.status(201).json({ status: "success", data: newPost });
 }

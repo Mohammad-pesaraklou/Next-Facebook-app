@@ -1,7 +1,10 @@
-import Stories from "../modules/Stories";
+// styles
 import styles from "../../styles/Feed.module.scss";
-import InputBox from "../modules/InputBox";
+// components
+import Stories from "../modules/Stories";
 import Posts from "../modules/Posts";
+import InputBox from "../modules/InputBox";
+
 const Feed = () => {
   return (
     <div className={styles.container}>

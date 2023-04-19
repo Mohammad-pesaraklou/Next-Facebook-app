@@ -11,7 +11,7 @@ export default async function handler(req, res) {
       .json({ status: "failure", message: "error in connecting to db" });
   }
   const { postId } = req.query;
-  console.log(req.query);
+
   const DeletedPost = await Post.findByIdAndDelete(postId);
 
   res.status(201).json({

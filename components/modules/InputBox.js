@@ -46,7 +46,7 @@ const InputBox = () => {
     const req = await axios.post("api/posts/addPost", {
       obj,
     });
-    console.log(req);
+
     messageRef.current.value = "";
     setImagePicker(null);
     if (req.status === 201) return router.reload();

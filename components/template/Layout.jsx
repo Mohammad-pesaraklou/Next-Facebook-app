@@ -1,5 +1,6 @@
-import React from 'react';
+// components
 import Navbar from './Navbar';
+// style
 import styles from '../../styles/Home.module.scss'
 
 

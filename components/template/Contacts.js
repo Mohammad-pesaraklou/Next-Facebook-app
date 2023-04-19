@@ -1,5 +1,7 @@
-import { contacts } from "@/utils/dummy";
 import { Avatar, Typography } from "@mui/material";
+// data
+import { contacts } from "@/utils/dummy";
+// icons
 import VideoCameraFrontOutlinedIcon from "@mui/icons-material/VideoCameraFrontOutlined";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import MoreHorizSharpIcon from "@mui/icons-material/MoreHorizSharp";

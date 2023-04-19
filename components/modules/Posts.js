@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useSession } from "next-auth/react";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
+// components
 import PostCard from "./PostCard";
 // style
 import styles from "../../styles/PostsStyle.module.scss";
