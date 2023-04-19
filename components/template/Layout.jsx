@@ -1,5 +1,7 @@
 import React from 'react';
 import Navbar from './Navbar';
+import styles from '../../styles/Home.module.scss'
+
 
 const Layout = ({ children }) => {
     return (
@@ -10,8 +12,8 @@ const Layout = ({ children }) => {
             <main>
                 {children}
             </main>
-            <footer>
-                <h6>this is footer</h6>
+            <footer className={styles.footer}>
+                Next.js Facebook Clone App | Next Project &copy;
             </footer>
         </div>
     );

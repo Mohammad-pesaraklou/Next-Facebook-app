@@ -3,7 +3,10 @@ import { Avatar, Stack } from "@mui/material";
 import { useSession } from "next-auth/react";
 // styles
 import styles from "../../styles/Sidebar.module.scss";
+import { useTheme } from "@mui/material";
 const SideBar = () => {
+  const theme = useTheme();
+
   const { data } = useSession();
   return (
     <Stack

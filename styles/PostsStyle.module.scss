@@ -12,6 +12,7 @@
   flex-direction: column;
   background-color: #ffffff;
   box-shadow: 10px 10px 8px #edebebbc, -7px -7px 10px #edebebbc;
+
   @media (min-width: 900px) {
     width: 700px;
     .postImg {
@@ -40,6 +41,7 @@
 .postImg {
   width: 100%;
   height: 200px;
+  color: rgba(230, 224, 224, 0.452);
 }
 .profileSection {
   padding: 10px;
